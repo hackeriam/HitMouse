@@ -1,0 +1,62 @@
+@charset "UTF-8";
+    /*HUA[LAYOUT
+    */
+        /*IMAGE
+            CANVAS
+        */
+        /*TEXT
+        */
+    html{font-size: 93.75%;}
+    html,body{height: 100%;background-color: #ff5a00;overflow-x: hidden;}
+
+    body,div,canvas{margin: 0;padding: 0;}
+    img{display: block;margin: 0 auto;max-width: 100%;max-height: 100%;-ms-interpolation-mode: bicubic;}
+    .back_img{background-repeat: no-repeat;background-position: center center;background-size: contain;}
+
+#container{
+    width: 100%;
+    height: 100%;
+}
+
+    #main{
+        position:relative;
+        z-index:2500;
+
+        width: 100%;
+        height: 100%;
+    }
+        canvas{
+            display: block;
+                margin: 0 auto;
+
+                max-width: 100%;
+            max-height: 100%;
+        }
+
+    /*1280分辨率以上（大于1200px)*/
+    @media screen and ( min-width: 1200px ){
+        html{font-size: 375% !important;}
+    }
+    /*1100分辨率（大于960px，小于1199px）*/
+    @media screen and (min-width: 960px) and (max-width: 1199px) {
+        html{font-size: 281.25% !important;}
+    }
+    /*880分辨率（大于768px，小于959px）*/
+    @media screen and (min-width: 768px) and (max-width: 959px) {
+        html{font-size: 187.5% !important;}
+    }
+    /*720分辨率（大于480px，小于767px）*/
+    @media screen and (min-width: 480px) and (max-width: 767px){
+        html{font-size: 140.625% !important;}
+        /*
+          720*1280的手机
+              横屏：w1280/2=640显示此分辨率下的样式*/
+    }
+    /*440分辨率以下（小于479px)*/
+    @media screen and ( max-width: 479px ){
+        html{font-size: 93.75% !important;}
+        /*
+          720*1280的手机
+              竖屏：w720/2=360显示此分辨率下的样式
+              横屏：w1280/2=640显示720分辨率的样式*/
+    }
